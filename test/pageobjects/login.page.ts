@@ -17,6 +17,10 @@ class LoginPage extends Page {
     return $("[data-test=signin-submit]");
   }
 
+  private get msgInvalidCredentials() {
+    return $('div=Username or password is invalid1');
+  }
+
   public open() {
     return super.open("/");
   }
@@ -25,6 +29,10 @@ class LoginPage extends Page {
     await this.inputUsername.setValue(username);
     await this.inputPassword.setValue(password);
     await this.btnSubmit.click();
+  }
+
+  public async isInvalidCredentialsErrorDisplayed() {
+    return this.msgInvalidCredentials.isDisplayed();
   }
 }
 

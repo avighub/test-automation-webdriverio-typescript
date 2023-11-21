@@ -10,4 +10,12 @@ describe("Login", () => {
 
     expect(await HomePage.isLogoutButtonDisplayed()).toBeTrue();
   });
+
+  it("should not be able to login with valid credentials", async () => {
+    await LoginPage.open();
+
+    await LoginPage.login("invalid_username", "invalid_password");
+
+    expect(await LoginPage.isInvalidCredentialsErrorDisplayed()).toBeTrue();
+  });
 });
