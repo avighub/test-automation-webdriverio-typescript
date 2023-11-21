@@ -12,12 +12,6 @@ class HomePage extends Page {
   public open() {
     return super.open("/");
   }
-
-  public async isLogoutButtonDisplayed() {
-    return await this.btnLogout.waitForExist({
-      timeoutMsg: "Logout button could not be found.",
-    });
-  }
 }
 
 export default new HomePage();

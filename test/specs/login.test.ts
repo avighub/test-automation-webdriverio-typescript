@@ -8,7 +8,7 @@ describe("Login", () => {
 
     await LoginPage.login("Katharina_Bernier", "s3cret");
 
-    expect(await HomePage.isLogoutButtonDisplayed()).toBeTrue();
+    await expect(HomePage.btnLogout).toBeDisplayed();
   });
 
   it("should not be able to login with valid credentials", async () => {
@@ -16,6 +16,6 @@ describe("Login", () => {
 
     await LoginPage.login("invalid_username", "invalid_password");
 
-    expect(await LoginPage.isInvalidCredentialsErrorDisplayed()).toBeTrue();
+    await expect(LoginPage.msgInvalidCredentials).toBeDisplayed();
   });
 });

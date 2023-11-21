@@ -5,20 +5,20 @@ import Page from "./page.js";
  * sub page containing specific selectors and methods for a specific page
  */
 class LoginPage extends Page {
-  private get inputUsername() {
+  public get inputUsername() {
     return $('[name="username"]');
   }
 
-  private get inputPassword() {
+  public get inputPassword() {
     return $("[name=password]");
   }
 
-  private get btnSubmit() {
+  public get btnSubmit() {
     return $("[data-test=signin-submit]");
   }
 
-  private get msgInvalidCredentials() {
-    return $('div=Username or password is invalid1');
+  public get msgInvalidCredentials() {
+    return $("div=Username or password is invalid");
   }
 
   public open() {
@@ -29,10 +29,6 @@ class LoginPage extends Page {
     await this.inputUsername.setValue(username);
     await this.inputPassword.setValue(password);
     await this.btnSubmit.click();
-  }
-
-  public async isInvalidCredentialsErrorDisplayed() {
-    return this.msgInvalidCredentials.isDisplayed();
   }
 }
 
