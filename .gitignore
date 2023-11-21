@@ -1,0 +1,6 @@
+# folders
+node_modules
+allure-results
+
+# files
+*.DS_Store
