@@ -12,6 +12,14 @@
 - To Run specific spec file : ```npm wdio run --spec example.e2e.ts```
 - To Run specific suite : ```npm wdio run  --suite exampleSuiteName```
 
+#### How to check ESLint Rules
+- run ```npm run lint```
+- Current enforced rules
+  - ```expect()``` calls must be prefixed with an ```await```
+  - Don't allow ```browser.debug()``` statements
+  - Don't allow ```browser.pause()``` statements
+- If you want to enforce more stricter linting, use ```.eslintrc-standard-with-typescript.cjs```
+
 #### TODOs
 - [ ] Add Best practices for writing tests and page objects
 - [ ] Add Allure History report with github pages
