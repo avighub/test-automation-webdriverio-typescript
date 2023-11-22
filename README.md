@@ -20,6 +20,10 @@
   - Don't allow ```browser.pause()``` statements
 - If you want to enforce more stricter linting, use ```.eslintrc-standard-with-typescript.cjs```
 
+#### How to view Report
+- Install allure in your system from [here](https://allurereport.org/docs/gettingstarted-installation/)
+- run: ```allure serve allure-results```
+
 #### Best practices
 - While making changes to wdio.*.conf.ts , ensure to sync changes to all .conf.ts files to align the configurations across all environments
 - Add examples inside ./examples directory if any new feature is added, so it will be easier for others to follow along
