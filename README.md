@@ -1,7 +1,7 @@
 ### WEB Test Automation framework with WebDriverIO and Typescript
 #### Tool Sets
 - WEB Automation: WebDriverIO
-- Test Runner: Jasmine
+- Test Runner: Mocha
 - Language: Typescript
 - Design Patterns: Page Object Model
 - Reporting: Allure
