@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["test/**/*.ts", "*.conf.ts"],
+  "include": ["test/**/*.ts", "*.conf.ts", "examples/**/*"],
   "exclude": ["node_modules"]
 }
