@@ -8,7 +8,7 @@
       "node",
       "@wdio/globals/types",
       "expect-webdriverio",
-      "@wdio/jasmine-framework"
+      "@wdio/mocha-framework"
     ],
     "skipLibCheck": true,
     "noEmit": true,

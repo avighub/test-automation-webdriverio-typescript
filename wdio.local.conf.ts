@@ -127,7 +127,7 @@ export const config: Options.Testrunner = {
   //
   // Make sure you have the wdio adapter package for the specific framework installed
   // before running any tests.
-  framework: "jasmine",
+  framework: "mocha",
 
   //
   // The number of times to retry the entire specfile when it fails as a whole
@@ -144,17 +144,10 @@ export const config: Options.Testrunner = {
   // see also: https://webdriver.io/docs/dot-reporter
   reporters: ["spec", ["allure", { outputDir: "allure-results" }]],
 
-  // Options to be passed to Jasmine.
-  jasmineOpts: {
-    // Jasmine default timeout
-    defaultTimeoutInterval: 60000,
-    //
-    // The Jasmine framework allows interception of each assertion in order to log the state of the application
-    // or website depending on the result. For example, it is pretty handy to take a screenshot every time
-    // an assertion fails.
-    expectationResultHandler: function (passed, assertion) {
-      // do something
-    },
+  // Options to be passed to Mocha.
+  mochaOpts: {
+    // Mocha default timeout : 30000
+    timeout: 60000,
   },
 
   //

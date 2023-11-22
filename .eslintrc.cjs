@@ -11,6 +11,6 @@ module.exports = {
         "project": ["./tsconfig.json"]
     },
     "env": {
-        "jasmine": true,
+        "mocha": true,
     }
 }
