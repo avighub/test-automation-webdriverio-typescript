@@ -20,6 +20,13 @@
   - Don't allow ```browser.pause()``` statements
 - If you want to enforce more stricter linting, use ```.eslintrc-standard-with-typescript.cjs```
 
+#### Best practices
+- While making changes to wdio.*.conf.ts , ensure to sync changes to all .conf.ts files to align the configurations across all environments
+- Add examples inside ./examples directory if any new feature is added, so it will be easier for others to follow along
+- Update Best practices section in README if you feel the information is obsolete or anything new has been introduced/reduced
+- Add TODOs if you have any ideas to improve the framework and create an issue in GitHub for the same to track
+- Use ```await browser.reloadSession()``` when you need a fresh browser session for each test. <br> Ideally this is a the most recommended approach but WDIO uses same browser session per spec file.
+
 #### TODOs
 - [ ] Add Best practices for writing tests and page objects
 - [ ] Add Allure History report with github pages
