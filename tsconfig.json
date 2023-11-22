@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["test", "wdio.conf.ts"],
+  "include": ["test/**/*.ts", "*.conf.ts"],
   "exclude": ["node_modules"]
 }
